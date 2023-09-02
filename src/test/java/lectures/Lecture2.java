@@ -32,8 +32,8 @@ public class Lecture2 {
 
   @Test
   public void intStreamIterate() throws Exception {
-    IntStream.iterate(0, operand -> operand + 1)
-        .filter(number -> number % 2 == 0)
+    IntStream.iterate(1, operand -> operand + 1)
+        .filter(number -> number % 2==0)
         .limit(20)
         .forEach(System.out::println);
   }
