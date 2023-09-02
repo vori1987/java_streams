@@ -64,21 +64,20 @@ public class Lecture7 {
     BigDecimal bigDecimalSum = BigDecimal.valueOf(sum);
     System.out.println(sum);
     System.out.println(bigDecimalSum);
-
   }
 
   @Test
   public void statistics() throws Exception {
     List<Car> cars = MockData.getCars();
-    DoubleSummaryStatistics statistics = cars.stream()
+    DoubleSummaryStatistics carStatistics = cars.stream()
         .mapToDouble(Car::getPrice)
         .summaryStatistics();
-    System.out.println(statistics);
-    System.out.println(statistics.getAverage());
-    System.out.println(statistics.getCount());
-    System.out.println(statistics.getMax());
-    System.out.println(statistics.getMin());
-    System.out.println(statistics.getSum());
+    System.out.println(carStatistics);
+    System.out.println(carStatistics.getAverage());
+    System.out.println(carStatistics.getCount());
+    System.out.println(carStatistics.getMax());
+    System.out.println(carStatistics.getMin());
+    System.out.println(carStatistics.getSum());
   }
 
 }
